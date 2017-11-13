@@ -9,7 +9,7 @@
 
 using namespace std;
 using namespace cv;
-int main() try
+int main() //try
 {
     // Create a context object. This object owns the handles to all connected realsense devices.
     rs::context ctx;
@@ -69,10 +69,4 @@ int main() try
 
     return EXIT_SUCCESS;
 }
-catch(const rs::error & e)
-{
-    // Method calls against librealsense objects may throw exceptions of type rs::error
-    printf("rs::error was thrown when calling %s(%s):\n", e.get_failed_function().c_str(), e.get_failed_args().c_str());
-    printf("    %s\n", e.what());
-    return EXIT_FAILURE;
-}
+
