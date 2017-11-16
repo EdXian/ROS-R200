@@ -1,7 +1,7 @@
 # Intel Realsense camera C++ application for ROS.
 
 ## Pre-install & Requirements
-Note that all packages should be install in path /opt/... or the catkin tool cant find them!
+Note that all packages should be installed in path /opt/... or the catkin tool cant find them!
 
  1. [ROS install](http://wiki.ros.org/kinetic/Installation/Ubuntu)
 
