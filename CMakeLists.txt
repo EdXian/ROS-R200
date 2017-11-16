@@ -7,14 +7,17 @@ project(rl_cv)
 find_package(catkin REQUIRED COMPONENTS
   roscpp
   realsense_camera
-  cv_bridge
+
+
+  #cv_bridge
 
 )
 find_package(OpenCV REQUIRED)
 find_package(OpenGL REQUIRED)
 
 catkin_package(
-#  INCLUDE_DIRS include
+  INCLUDE_DIRS include
+
 #  LIBRARIES rl_cv
 #  CATKIN_DEPENDS roscpp
 #  DEPENDS system_lib
@@ -53,8 +56,11 @@ add_executable(rl_stream src/rl_stream.cpp)
 
 ## Specify libraries to link a library or executable target against
  target_link_libraries(rl_test
-   ${catkin_LIBRARIES}
-   ${OpenCV_LIBS}
+     ${catkin_LIBRARIES}
+     ${OpenCV_LIBS}
+     ${OPENGL_gl_LIBRARY}
+
+     glfw
 
  )
 target_link_libraries(rl_stream
