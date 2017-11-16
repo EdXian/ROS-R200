@@ -20,8 +20,9 @@ int main(int argc, char **argv)
 {
   rs::context ctx;
   rs::device *dev = ctx.get_device(0);
-
+  //rs::device *dev2 = ctx.get_device(0);
   dev->enable_stream(rs::stream::depth, 640, 480, rs::format::z16, 60);
+  dev->enable_stream(rs::stream::color, 640, 480, rs::format::yuyv, 60);
   dev->start();
   for(int i=0;i<30;i++)
   {
@@ -34,17 +35,12 @@ int main(int argc, char **argv)
 
    while(!glfwWindowShouldClose(win))
    {
-
      glfwPollEvents();
      dev->wait_for_frames();
      glClear(GL_COLOR_BUFFER_BIT);
-
-
      glPixelTransferf(GL_RED_SCALE, 0xFFFF * dev->get_depth_scale() / 2.0f);
      glDrawPixels(640, 480, GL_RED, GL_UNSIGNED_SHORT, dev->get_frame_data(rs::stream::depth));
      glPixelTransferf(GL_RED_SCALE, 1.0f);
-
-
      glfwSwapBuffers(win);
    }
 

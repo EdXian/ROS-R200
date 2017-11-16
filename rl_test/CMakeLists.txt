@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 2.8.3)
-project(rl_cv)
+project(rl_test)
 
  add_compile_options(-std=c++11)
 
@@ -42,8 +42,8 @@ include_directories(
 ## Declare a C++ executable
 ## With catkin_make all packages are built within a single CMake context
 ## The recommended prefix ensures that target names across packages don't collide
-add_executable(rl_test src/rltest.cpp)
-add_executable(rl_stream src/rl_stream.cpp)
+add_executable(rl_test src/rl_test.cpp)
+
 ## Rename C++ executable without prefix
 ## The above recommended prefix causes long target names, the following renames the
 ## target back to the shorter version for ease of user use
@@ -63,10 +63,4 @@ add_executable(rl_stream src/rl_stream.cpp)
      glfw
 
  )
-target_link_libraries(rl_stream
-  ${catkin_LIBRARIES}
-  ${OpenCV_LIBS}
-  ${OPENGL_gl_LIBRARY}
-  glfw
-)
 
