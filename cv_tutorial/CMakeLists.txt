@@ -44,7 +44,7 @@ include_directories(
 ## The recommended prefix ensures that target names across packages don't collide
 
 add_executable(tutorial_1 src/tutorial_1.cpp)
-
+add_executable(tutorial_2 src/tutorial_2.cpp)
 ## Rename C++ executable without prefix
 ## The above recommended prefix causes long target names, the following renames the
 ## target back to the shorter version for ease of user use
@@ -59,6 +59,12 @@ add_executable(tutorial_1 src/tutorial_1.cpp)
 
 
 target_link_libraries(tutorial_1
+  ${catkin_LIBRARIES}
+  ${OpenCV_LIBS}
+  ${OPENGL_gl_LIBRARY}
+  glfw
+)
+target_link_libraries(tutorial_2
   ${catkin_LIBRARIES}
   ${OpenCV_LIBS}
   ${OPENGL_gl_LIBRARY}

@@ -65,7 +65,9 @@ int main()
       cv::Mat depth16(depth_intrin.height,depth_intrin.width,CV_16U,(uchar *)rs_camera.get_frame_data(rs::stream::depth));
       cv::Mat depth8u = depth16;
       depth8u.convertTo(depth8u,CV_8UC1,255.0/1000.0);
+
       cv::imshow("tutorial_1_depth",depth8u);
+
     }
 
     cvWaitKey(1);

@@ -1,5 +1,11 @@
 # Intel Realsense camera C++ application for ROS.
 
+This package is tested on ROS kinetic only and no guarantee for other ROS version.
+
+## Device support
+
+Intel realsense R200 camera
+
 ## Pre-install & Requirements
 Note that all packages should be installed in path /opt/... or the catkin tool cant find them!
 
