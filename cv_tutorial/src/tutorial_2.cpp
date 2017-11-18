@@ -3,6 +3,7 @@
 #include "opencv2/opencv.hpp"
 #include "opencv2/highgui.hpp"
 #include "opencv2/text/ocr.hpp"
+
 using namespace std;
 using namespace cv;
 using namespace rs;
@@ -10,6 +11,7 @@ using namespace rs;
 cv::Mat rgb_erode;
 cv::Mat rgb_dilate;
 
+CascadeClassifier face_cascade;
 
 int main()
 {
@@ -21,8 +23,7 @@ int main()
   cv::namedWindow("rgb_color",cv::WINDOW_AUTOSIZE);
   camera.start();
 
-  Mat element = getStructuringElement(MORPH_RECT, Size(3, 3));
-
+  Mat element = getStructuringElement(MORPH_RECT, Size(6, 6));
 
   while(true)
   {
@@ -39,9 +40,12 @@ int main()
     cv::imshow("erode",rgb_erode);
     cv::dilate(color,rgb_dilate,element);
     cv::imshow("dilate",rgb_dilate);
-    std::cout<<"acess to an element in Mat :"<<color.at<short>(160,120)<<std::endl;
 
-     cvWaitKey(1);
+    color = rgb_dilate - rgb_erode;
+
+    cv::imshow("hat",color);
+
+    cvWaitKey(1);
   }
 
 }

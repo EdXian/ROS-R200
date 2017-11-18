@@ -45,6 +45,7 @@ include_directories(
 
 add_executable(tutorial_1 src/tutorial_1.cpp)
 add_executable(tutorial_2 src/tutorial_2.cpp)
+add_executable(tutorial_3 src/tutorial_3.cpp)
 ## Rename C++ executable without prefix
 ## The above recommended prefix causes long target names, the following renames the
 ## target back to the shorter version for ease of user use
@@ -67,6 +68,12 @@ target_link_libraries(tutorial_1
 target_link_libraries(tutorial_2
   ${catkin_LIBRARIES}
   ${OpenCV_LIBS}
+  ${OPENGL_gl_LIBRARY}
+  glfw
+)
+target_link_libraries(tutorial_3
+  ${catkin_LIBRARIES}
+  ${OpenCV_LIBRARIES}
   ${OPENGL_gl_LIBRARY}
   glfw
 )

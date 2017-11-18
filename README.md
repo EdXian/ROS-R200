@@ -34,11 +34,12 @@ Note that all packages should be installed in path /opt/... or the catkin tool c
 
 
 ## Reference or Cookbook
- * [OpenCV tutorial](https://www.tutorialspoint.com/opencv/)
+ * [OpenCV3.2 tutorial](https://docs.opencv.org/3.2.0/d9/d97/tutorial_table_of_content_features2d.html)
  * [Stream Format](https://github.com/IntelRealSense/librealsense/blob/legacy/doc/supported_video_formats.pdf)
  * [Step by Step](https://software.intel.com/en-us/articles/using-librealsense-and-opencv-to-stream-rgb-and-depth-data#_Toc462147826)
 
 
 ## TODO List
  * Object-tracking in real-time.
+ * SLAM (Simultaneous localiztion and mapping)
 
