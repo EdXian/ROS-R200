@@ -42,11 +42,11 @@ cd ..
 catkin_make
 
 ```
-## Reference or Cookbook
+## Reference and Cookbook
  * [OpenCV3.2 tutorial](https://docs.opencv.org/3.2.0/d9/d97/tutorial_table_of_content_features2d.html)
  * [Stream Format](https://github.com/IntelRealSense/librealsense/blob/legacy/doc/supported_video_formats.pdf)
  * [Step by Step](https://software.intel.com/en-us/articles/using-librealsense-and-opencv-to-stream-rgb-and-depth-data#_Toc462147826)
-
+ * [Developer's Guide](https://software.intel.com/sites/products/realsense/camera/developer_guide.html)
 
 ## TODO List
  * Object-tracking in real-time.

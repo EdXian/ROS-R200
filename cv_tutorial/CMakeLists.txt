@@ -16,7 +16,7 @@ find_package(OpenCV REQUIRED)
 find_package(OpenGL REQUIRED)
 
 catkin_package(
-  INCLUDE_DIRS include
+ # INCLUDE_DIRS include
 
 #  LIBRARIES rl_cv
 #  CATKIN_DEPENDS roscpp

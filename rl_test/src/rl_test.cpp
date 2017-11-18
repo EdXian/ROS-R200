@@ -23,6 +23,9 @@ int main(int argc, char **argv)
   //rs::device *dev2 = ctx.get_device(0);
   dev->enable_stream(rs::stream::depth, 640, 480, rs::format::z16, 60);
   dev->enable_stream(rs::stream::color, 640, 480, rs::format::yuyv, 60);
+  dev->set_option(rs::option::r200_emitter_enabled, 0.3f);
+
+
   dev->start();
   for(int i=0;i<30;i++)
   {
