@@ -1,6 +1,6 @@
 # Intel Realsense camera C++ application for ROS.
 
-This package is tested on ROS kinetic only and no guarantee for other ROS version.
+This package have been tested in ROS kinetic only and no guarantee for other ROS versions.
 
 ## Device support
 
@@ -32,7 +32,16 @@ Note that all packages should be installed in path /opt/... or the catkin tool c
  ```
  3. OpenCV greater than 3.2.0 version
 
+## How to use this package?
 
+Assume that you alredy have a catkin-workspace (`catkin_ws`) in your root directory.
+```
+cd ~/catkin_ws/src
+git clone https://github.com/EdXian/ROS-R200.git
+cd ..
+catkin_make
+
+```
 ## Reference or Cookbook
  * [OpenCV3.2 tutorial](https://docs.opencv.org/3.2.0/d9/d97/tutorial_table_of_content_features2d.html)
  * [Stream Format](https://github.com/IntelRealSense/librealsense/blob/legacy/doc/supported_video_formats.pdf)

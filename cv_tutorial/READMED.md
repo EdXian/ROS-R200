@@ -17,7 +17,7 @@ tutorial_2 will show you how to use OpenCV Filter APIs and get element in Mat.
 
 ## tutorial_3
 
-tutorial_3 shows that how to to use the Harris method to detect corners.
+tutorial_3 shows that how to detect corners in streaming data.
 
 
 
