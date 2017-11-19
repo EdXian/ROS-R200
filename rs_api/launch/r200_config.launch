@@ -1,6 +1,6 @@
 <launch>
 
-<param name="focal_length" type="int" value="250"/>
-<node pkg="rs_api" name="r200_config" type="option_config"/>
+<param name="color_saturation" type="int" value="250"/>
+<node pkg="rs_api" name="r200_config" type="option_config" output="screen"/>
 
 </launch>
