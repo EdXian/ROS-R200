@@ -134,7 +134,7 @@ include_directories(
 ## With catkin_make all packages are built within a single CMake context
 ## The recommended prefix ensures that target names across packages don't collide
  add_executable(option_config src/option_config.cpp)
-
+add_executable(r200_parameter src/r200_parameter.cpp)
 ## Rename C++ executable without prefix
 ## The above recommended prefix causes long target names, the following renames the
 ## target back to the shorter version for ease of user use
@@ -150,7 +150,10 @@ include_directories(
    ${catkin_LIBRARIES}
      ${OpenCV_LIBS}
  )
-
+target_link_libraries(r200_parameter
+  ${catkin_LIBRARIES}
+    ${OpenCV_LIBS}
+)
 #############
 ## Install ##
 #############
