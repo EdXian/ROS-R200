@@ -52,6 +52,9 @@ cd ..
 catkin_make
 
 ```
+```
+rosrun cv_tutorial tutorial_1
+```
 ## Reference and Cookbook
  * [OpenCV3.2 tutorial](https://docs.opencv.org/3.2.0/d9/d97/tutorial_table_of_content_features2d.html)
  * [Stream Format](https://github.com/IntelRealSense/librealsense/blob/legacy/doc/supported_video_formats.pdf)

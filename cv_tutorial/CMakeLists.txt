@@ -7,13 +7,11 @@ project(cv_tutorial)
 find_package(catkin REQUIRED COMPONENTS
   roscpp
   realsense_camera
-
-
   #cv_bridge
 
 )
 find_package(OpenCV REQUIRED)
-find_package(OpenGL REQUIRED)
+
 
 catkin_package(
  # INCLUDE_DIRS include
@@ -62,18 +60,15 @@ add_executable(tutorial_3 src/tutorial_3.cpp)
 target_link_libraries(tutorial_1
   ${catkin_LIBRARIES}
   ${OpenCV_LIBS}
-  ${OPENGL_gl_LIBRARY}
-  glfw
+
 )
 target_link_libraries(tutorial_2
   ${catkin_LIBRARIES}
   ${OpenCV_LIBS}
-  ${OPENGL_gl_LIBRARY}
-  glfw
+
 )
 target_link_libraries(tutorial_3
   ${catkin_LIBRARIES}
   ${OpenCV_LIBRARIES}
-  ${OPENGL_gl_LIBRARY}
-  glfw
+
 )
