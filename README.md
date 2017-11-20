@@ -30,7 +30,12 @@ Note that all packages should be installed in path /opt/... or the catkin tool c
  sudo apt update
  sudo apt install -y librealsense-object-recognition-dev librealsense-persontracking-dev librealsense-slam-dev libopencv-dev
  ```
- 3. OpenCV greater than 3.2.0 version
+ 3. realsense-camera
+	
+  ```
+  sudo apt-get install ros-kinetic-realsense-camera
+  ```	
+ 4. OpenCV greater than 3.2.0 version
 
 ## How to use this package?
 
